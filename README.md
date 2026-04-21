@@ -1,2 +1,59 @@
-# TDAH-Aware
-O TDAH Aware é uma ferramenta de triagem estatística que utiliza Inteligência Artificial para auxiliar na identificação de padrões comportamentais relacionados ao TDAH (Transtorno de Déficit de Atenção e Hiperatividade).
+# TDAH Aware: Apoio Clínico Inteligente com IA
+
+O **TDAH Aware** é uma plataforma de triagem que utiliza Inteligência Artificial para identificar padrões comportamentais associados ao TDAH.  
+
+A solução foi desenvolvida tanto para **orientação ao público geral** quanto como **ferramenta de apoio à decisão para profissionais de saúde**.
+
+---
+
+## Demonstração Online
+
+Acesse o Web App em tempo real:  
+https://tdahaware.streamlit.app/
+
+---
+
+## Como Funciona
+
+O sistema processa dados por meio de um modelo de Machine Learning (**Random Forest**), treinado com o dataset clínico *Hyperaktiv*.
+
+### Entradas
+- Perfil demográfico  
+- Escalas clínicas:
+  - ASRS  
+  - WURS  
+  - MADRS  
+  - HADS  
+
+### Inteligência
+O modelo realiza um **diagnóstico diferencial**, avaliando se os sintomas de desatenção são:
+- Primários (TDAH)  
+- Ou secundários a quadros como ansiedade ou depressão  
+
+### Resultado
+Após responder as perguntas de todos os questionários, o usuário recebe um laudo estatístico imediato, que apresenta a probabilidade de sincronia com o perfil de TDAH em formato de porcentagem (0-100%). O resultado é acompanhado de uma interpretação textual que indica se os padrões informados possuem Alta ou Baixa Sincronia com os casos clínicos reais utilizados no treinamento da IA, servindo como um ponto de partida para a avaliação profissional.
+
+---
+
+## Tecnologias Utilizadas
+
+- **Linguagem:** Python 3.11+  
+- **IA/ML:** Scikit-Learn, Joblib  
+- **Processamento de Dados:** Pandas, NumPy  
+- **Interface:** Streamlit  
+
+---
+
+## Aviso importante ⚠️
+Esta ferramenta é um protótipo de triagem estatística. O resultado é uma probabilidade matemática e não substitui um diagnóstico médico. Sempre consulte um profissional de saúde qualificado.
+
+---
+
+## Execução Local
+
+```bash
+git clone https://github.com/ArthurCruzz17/TDAH_Aware.git
+cd TDAH_Aware
+
+pip install -r requirements.txt
+streamlit run app.py
